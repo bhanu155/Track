@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+
+<div class="container" style="height: 100%; width:100%; background-color: #f0f0f0; margin-right:2; margin-top:2em;">
+	<div class="row d-flex mr-0" style="width:100%;margin-bottom:3em;">
+		
+		
+		<div class="col-12 col-md-2 col-lg-3 mt-5 d-flex align-items-center justify-content-center">
+			<div class="list-group align-items-center justify-content-start text-center">
+			  <a href="/dashboard" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> <b>Home</b></a>
+			  <a href="/heatmap" class="list-group-item list-group-item-action"><i class="fas fa-fire-alt"></i> <b>Heat Map</b></a>
+			  <a href="/sess_rec" class="list-group-item list-group-item-action"><i class="far fa-play-circle"></i> <b>Session recording</b></a>
+			  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-filter"></i> <b>Filter</b></a>
+			  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> <b>Settings</b></a>
+			</div>	
+		</div>
+
+		
+		<div class="col-12 col-md-10 col-lg-9 mt-5 mx-auto">
+			<hr style="border-color: black;border-width:0.15em;">
+			<h1 class="text-center" style="font-family: 'Livvic', sans-serif; font-weight: 700; color:#569cba; background-color: rgba(186, 216, 227, 0.1);"><i>DASHBOARD</i></h1>
+			<hr style="border-color: black;border-width: 0.15em;">
+			<div class="container rounded" style="margin:auto;background-color: rgba(186, 216, 227, 0.2);">
+				<div class="row d-flex justify-content-center align-items-center my-2">
+					<div class="col-12 col-md-6 col-lg-7 chart-container" style="position: relative; height:40vh; width:80vw">
+						<canvas id="myChart1"></canvas>
+						<script type="text/javascript" src="scripts/audOvChart.js"></script>
+					</div>
+					<div class="col-12 col-md-6 col-lg-5 chart-container" style="position: relative; height:40vh; width:80vw;">	
+						<canvas id="myChart2"></canvas>
+						
+						<script src="scripts/liveVisitChart.js"></script>
+					</div>
+				</div>
+					
+				<div class="row d-flex justify-content-center align-items-center my-2">
+					<div class="col-12 col-md-6 col-lg-7 chart-container" style="position: relative; height:40vh; width:80vw; height: 100%;">
+						<canvas id="myChart3"></canvas>
+						<script src="scripts/browserVis.js"></script>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+			
+	</div>
+</div>
+
+
+
+<% include ../partials/footer %>

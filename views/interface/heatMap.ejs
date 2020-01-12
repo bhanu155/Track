@@ -1,0 +1,86 @@
+<% include ../partials/header %>
+
+<div class="container" style="height: 100%; width:100%; background-color: #f0f0f0; margin-right:2; margin-top:2em;">
+	<div class="row d-flex mr-0" style="width:100%;margin-bottom:3em;">
+		
+		
+		<div class="col-12 col-md-2 col-lg-3 mt-5 d-flex align-items-center justify-content-center">
+			<div class="list-group align-items-center justify-content-start text-center">
+			  <a href="/dashboard" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> <b>Home</b></a>
+			  <a href="/heatmap" class="list-group-item list-group-item-action"><i class="fas fa-fire-alt"></i> <b>Heat Map</b></a>
+			  <a href="/sess_rec" class="list-group-item list-group-item-action"><i class="far fa-play-circle"></i> <b>Session recording</b></a>
+			  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-filter"></i> <b>Filter</b></a>
+			  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> <b>Settings</b></a>
+			</div>	
+		</div>
+
+		
+		<div class="col-12 col-md-10 col-lg-9 mt-5 mx-auto">
+			
+			<div class="row">
+				<div class="col-12 col-md-10 col-lg-9">
+					<h3 class="text-center" style="color:#569cba; background-color: rgba(186, 216, 227, 0.1);"><i>Heat Map</i></h3>
+					<canvas id="heatMap" width="600" height="400"></canvas>
+				</div>
+				<div class="col-12 col-md-2 col-lg-3 text-center mt-5">
+					
+					<div class="row">
+						<ul style="list-style-type: none;" class="text-center">
+						<li><a href="#">home</a></li>
+						<li><a href="#">landing</a></li>
+						<li><a href="#">login</a></li>
+						<li><a href="#">logout</a></li>
+					</ul>
+					</div>
+
+					<div class="row">
+						<form>
+								<!-- 1 -->				
+							<div class="dropdown text-center mt-2 float-left">
+							  <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							   Category
+							  </button>
+							  
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#" style="color:red;">Bug</a>
+							    <a class="dropdown-item" href="#" style="color:blue;">Idea</a>
+							    <a class="dropdown-item" href="#" style="color:green;">Improvement</a>
+							    <a class="dropdown-item" href="#" style="color:green;">Functionality</a>
+							    <a class="dropdown-item" href="#" style="color:green;">Design</a>
+							  </div>
+							</div>
+							<div class="dropdown text-center mt-2 float-left">
+							  <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							   Priority
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#" style="color:red;">Minor</a>
+							    <a class="dropdown-item" href="#" style="color:blue;">Major</a>
+							    <a class="dropdown-item" href="#" style="color:green;">Critical</a>
+							    <a class="dropdown-item" href="#" style="color:green;">Blocker</a>
+							  </div>
+							</div>
+							<div class="dropdown text-center mt-2 float-left">
+								<button class="btn btn-success btn-sm float-left" type="submit"><i class="far fa-plus-square"></i></button>
+							</div>
+							<br>
+							<div class="form-inline float-left">
+								<textarea rows="5" cols="25" name="tag1" placeholder="Add a relevant tag">
+								</textarea>
+							</div>
+							
+						</form>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</div>
+
+<script type="text/javascript" src='scripts/simpleheat.js'></script>
+<script type='text/javascript' src='scripts/heatMap.js'></script>
+
+<% include ../partials/footer %>

@@ -1,0 +1,10 @@
+body{
+	background="#f0f0f0"
+}
+
+.list-group-item-action{
+	background-color: rgba(186, 216, 227, 0.2); 
+	color:black;
+	font-family: 'Livvic', sans-serif; 
+	font-weight: 700;
+}
